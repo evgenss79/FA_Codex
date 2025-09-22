@@ -46,7 +46,7 @@ class LocalStorageService {
     }
   }
 
-  Future<void> _delete(String key) async {
+  Future<void> delete(String key) async {
     if (_box != null && _box!.isOpen) {
       await _box!.delete(key);
     } else {

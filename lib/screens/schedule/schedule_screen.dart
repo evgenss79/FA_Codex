@@ -73,7 +73,7 @@ class ScheduleScreen extends StatelessWidget {
   }
 
   String _formatTime(DateTime time) {
-    final String twoDigits(int value) => value.toString().padLeft(2, '0');
+    String twoDigits(int value) => value.toString().padLeft(2, '0');
     return '${twoDigits(time.hour)}:${twoDigits(time.minute)}';
   }
 
