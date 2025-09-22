@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../../models/family_member.dart';
+import '../../models/family_role.dart';
 import '../../providers/family_provider.dart';
 import '../../widgets/member_avatar.dart';
 
@@ -25,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
             child: ExpansionTile(
               leading: MemberAvatar(member: member),
               title: Text(member.displayName),
-              subtitle: Text(member.role.nameKey),
+              subtitle: Text(l10n.translate(member.role.nameKey)),
               children: <Widget>[
                 if (member.bio != null)
                   ListTile(
